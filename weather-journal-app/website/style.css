@@ -1,111 +1,189 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.holder{
-
-}
-
-.entry{
-    background: rgba(59, 74, 107, .4);
-}
-
-#entryHolder{
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
-.title{
-
+body {
+  background: #e9e9e9;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  outline: none;
+  padding-left: 1em;
+  box-sizing: border-box;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
-}
-h1{
-    font-size: 36px;
+button {
+  width: 100%;
+  padding: 0.5em 0;
+  cursor: pointer;
+  background: #03a9f4;
+  color: #212121;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  transition: all 0.3s ease-in-out;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+button:hover {
+  box-shadow: 2px 4px 5px #444;
+  background: #0277bd;
+  color: #fafafa;
 }
-/* Reset style for HTML element on active to have no border*/
+
+textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  height: 150px;
+  border-radius: 5px;
+}
+
 input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+textarea:focus {
+  border: 0.1em solid #212121;
+  border-radius: 5px;
 }
+
 /* Style for Placeholder Text*/
-::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
 
-} 
-  
-:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+::placeholder { /* Firefox, Chrome, Opera */
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+}
 
-} 
-  
-::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
 
-} 
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgba(0, 0, 0, 0.2);
+  font-style: italic;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Custom styles for containers */
+
+#app {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.holder {
+  margin: 0.5em 0;
+}
+
+.headline {
+  text-align: center;
+}
+
+.entry {
+  background: #0277bd;
+  border-radius: 5px;
+  padding-bottom: 1em;
+}
+
+.entry > .title {
+  margin: 0.5em 0;
+  text-align: center;
+  color: #fafafa;
+}
+
+.entry > .cards {
+  display: grid;
+  grid-template-columns: 100%;
+  /* grid-template-rows: minmax(150px, 200px); */
+}
+
+.entry > .cards > .entry_holder {
+  background: #fafafa;
+  margin: 0.5em 1em;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 2px 4px 5px #444;
+  font-family: 'Oswald', sans-serif;
+}
+
+.entry > .cards > .entry_holder > .place {
+  margin: 0.5em 0;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.entry > .cards > .entry_holder > .date {
+  color: grey;
+  font-style: italic;
+  font-weight: 200;
+  margin: 0.5em 0;
+}
+
+.entry > .cards > .entry_holder > .temp {
+  margin: 0.5em 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.entry > .cards > .entry_holder > .content {
+  margin: 0.5em 0;
+  font-weight: 100;
+}
+
+/* Responsive styles */
+
+@media (min-width: 500px) and (max-width: 700px) {
+  #app {
+    width: 80% !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  #app {
+    width: 70% !important;
+  }
+}
+
+@media (min-width: 900px) {
+  #app {
+    width: 50% !important;
+  }
+}
