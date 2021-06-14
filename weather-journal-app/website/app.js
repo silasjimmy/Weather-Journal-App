@@ -1,7 +1,7 @@
 /* Global Variables */
 
 let baseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
-let apiKey = '&APPID=afa6c3774c9251300eca88978c04aec0';
+const apiKey = '&APPID=afa6c3774c9251300eca88978c04aec0&units=metric';
 const cardsContainer = document.getElementById('cards');
 
 // Create a new date instance dynamically with JS
@@ -79,7 +79,7 @@ function createEntryHolder(data) {
   place.innerHTML = data.city + ", " + data.country;
   date.innerHTML = data.day + " at " + data.time;
   temp.innerHTML = "The temperature is " + data.temperature +
-                    "K with " + data.description;
+                    "&degC with " + data.description;
   feelings.innerHTML = "Feeling " + data.feelings;
 
   entryHolder.appendChild(place);
