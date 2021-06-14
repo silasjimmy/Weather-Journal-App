@@ -163,9 +163,11 @@ textarea:focus {
   font-weight: 500;
 }
 
-.entry > .cards > .entry_holder > .content {
+.entry > .cards > .entry_holder > .feelings {
   margin: 0.5em 0;
   font-weight: 100;
+  color: grey;
+  text-transform: capitalize;
 }
 
 /* Responsive styles */

@@ -13,24 +13,17 @@
       <h1>Weather Journal App</h1>
     </div>
     <div class="holder zip">
-      <label for="zip">Enter Zipcode here</label>
-      <input type="text" id="zip" placeholder="Example: xyz">
+      <label for="zipcode">Enter zipcode/city here</label>
+      <input type="text" id="zipcode" placeholder="Example: 05001 or london">
     </div>
     <div class="holder feel">
       <label for="feelings">How are you feeling today?</label>
-      <textarea class= "myInput" id="feelings" placeholder="Example: Feeling lucky" rows="9" cols="50"></textarea>
-      <button id="generate" type = "submit"> Generate </button>
+      <textarea id="feelings" placeholder="Example: lucky" rows="9" cols="50"></textarea>
+      <button type="submit" id="generate">Generate</button>
     </div>
     <div class="holder entry">
       <h2 class="title">Most Recent Entry</h2>
-      <div id="cards" class="cards">
-        <!-- <div id="entryHolder" class="entry_holder">
-          <h3 id="place" class="place"></h3>
-          <span id="date" class="date"></span>
-          <span id="temp" class="temp"></span>
-          <span id="content" class="content"></span>
-        </div> -->
-      </div>
+      <div id="cards" class="cards"></div>
     </div>
   </div>
 <script src="app.js" type="text/javascript"></script>
